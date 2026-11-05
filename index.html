@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="業務向けWebアプリケーションとソフトウェアテストの開発事例を紹介するポートフォリオ。">
+  <title>Webシステム開発・ソフトウェアテスト | Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14243c;
+      --muted: #536176;
+      --accent: #126885;
+      --bg: #f7f9fb;
+      --line: #dce3eb;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      line-height: 1.75
+    }
+
+    a {
+      color: var(--accent)
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 36px));
+      margin-inline: auto
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--white)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 65px
+    }
+
+    .logo {
+      font-weight: 800;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: .035em
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: .9rem;
+      flex-wrap: wrap
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted)
+    }
+
+    .hero {
+      padding: 88px 0 77px
+    }
+
+    .eyebrow {
+      font-size: .8rem;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.42;
+      letter-spacing: -.035em;
+      max-width: 17em;
+      margin: 14px 0 18px
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 660px;
+      font-size: 1.05rem
+    }
+
+    .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 30px
+    }
+
+    .link {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      border-radius: 10px;
+      padding: 11px 18px;
+      font-weight: 700;
+      font-size: .93rem;
+      color: var(--ink)
+    }
+
+    .link.primary {
+      background: var(--ink);
+      color: white
+    }
+
+    section {
+      padding: 52px 0
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 0 0 13px
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0 0 26px
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px;
+      min-width: 0
+    }
+
+    .num {
+      color: var(--accent);
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .09em
+    }
+
+    h3 {
+      font-size: 1.22rem;
+      margin: 8px 0 6px
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-size: .95rem
+    }
+
+    .tags {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin: 16px 0
+    }
+
+    .tag {
+      background: #eff4f6;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: .76rem;
+      color: #36566b
+    }
+
+    .details {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: .86rem
+    }
+
+    .details strong {
+      color: var(--ink)
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 21px
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 8px
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem
+    }
+
+    .note {
+      font-size: .82rem;
+      color: var(--muted)
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: .83rem
+    }
+
+    @media(max-width:720px) {
+      .hero {
+        padding: 62px 0
+      }
+
+      .cards,
+      .steps {
+        grid-template-columns: 1fr
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav"><a class="logo" href="#top">SOFTWARE PORTFOLIO</a>
+      <nav aria-label="メインナビゲーション"><a href="#works">開発事例</a><a href="#process">品質への取り組み</a><a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div class="eyebrow">Web Development × Software Testing</div>
+      <h1>業務の流れを、<br>使えるWebシステムに。</h1>
+      <p class="lead">業務向けWebアプリケーションの設計・実装から、テスト設計・自動テストまで。個人開発のプロトタイプ4製品を通じて、実装と検証の取り組みを公開しています。</p>
+      <div class="links"><a class="link primary" href="#works">開発事例を見る</a><a class="link" href="#contact">開発・テストの相談</a>
+      </div>
+    </div>
+    <section id="works" class="wrap">
+      <div class="eyebrow">Projects</div>
+      <h2>開発事例</h2>
+      <p class="sub">いずれも個人開発のローカル動作プロトタイプです。商用導入実績を意味するものではありません。</p>
+      <div class="cards">
+        <article class="card">
+          <div class="num">PROJECT 01</div>
+          <h3>ReportSnap</h3>
+          <p>現場作業の写真・記録を整理し、報告書PDFを作成するWebアプリ。</p>
+          <div class="tags"><span class="tag">現場報告</span><span class="tag">PDF生成</span><span class="tag">権限管理</span>
+          </div>
+          <div class="details"><strong>検証:</strong> 自動テスト70件成功（提出済みローカル報告に基づく）</div>
+        </article>
+        <article class="card">
+          <div class="num">PROJECT 02</div>
+          <h3>CheckLedger</h3>
+          <p>店舗や施設の設備点検を管理。点検計画、チェック結果、履歴を一元化。</p>
+          <div class="tags"><span class="tag">点検記録</span><span class="tag">履歴管理</span><span class="tag">帳票</span></div>
+          <div class="details"><strong>検証:</strong> 自動テスト87件成功（提出済みローカル報告に基づく）</div>
+        </article>
+        <article class="card">
+          <div class="num">PROJECT 03 / FEATURED</div>
+          <h3>AcceptFlow</h3>
+          <p>Web制作案件の検収・修正・再確認・承認を、版管理付きで扱うWebアプリ。</p>
+          <div class="tags"><span class="tag">検収</span><span class="tag">不具合管理</span><span class="tag">再テスト</span></div>
+          <div class="details"><strong>検証:</strong> 自動テスト71件成功（提出済みローカル報告に基づく）</div>
+        </article>
+        <article class="card">
+          <div class="num">PROJECT 04</div>
+          <h3>OrderLane</h3>
+          <p>オーダーメイド案件の受注・変更・納品までの進捗を追跡するWebアプリ。</p>
+          <div class="tags"><span class="tag">受注管理</span><span class="tag">納期管理</span><span class="tag">変更履歴</span>
+          </div>
+          <div class="details"><strong>検証:</strong> 自動テスト73件成功（提出済みローカル報告に基づく）</div>
+        </article>
+      </div>
+      <p class="note">※ 公開前にスクリーンショット、動作説明動画、仕様・テスト項目を追記してください。ブラウザE2Eは別途記載してください。</p>
+    </section>
+    <section id="process" class="wrap">
+      <div class="eyebrow">Engineering Quality</div>
+      <h2>品質への取り組み</h2>
+      <p class="sub">見た目だけでなく、業務を通して使えること、異常系に対応できることを重視しています。</p>
+      <div class="steps">
+        <div class="step"><strong>01｜要件と受入条件</strong>
+          <p>操作手順、入力条件、期待結果を明文化します。</p>
+        </div>
+        <div class="step"><strong>02｜自動テスト</strong>
+          <p>正常系・異常系・境界値・権限・競合更新などを検証します。</p>
+        </div>
+        <div class="step"><strong>03｜変更時の再検証</strong>
+          <p>GitHub Actionsで継続的に実行する仕組みを追加予定です。※構築後に文言更新</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h2>お問い合わせ</h2>
+      <p>小規模Webシステムの開発、テストケース作成、テスト自動化について相談を受け付けます。</p>
+      <p>
+        お問い合わせは
+        <a href="https://github.com/Teruya-Keigo">
+          GitHubプロフィール
+        </a>
+        からお願いします。
+      </p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">© Portfolio. 掲載製品は試作・検証段階です。</div>
+  </footer>
+</body>
+
+</html>
